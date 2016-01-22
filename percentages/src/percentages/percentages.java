@@ -34,23 +34,23 @@ public class percentages {
 				al_1.add(idx_two);
 			}
 		}
-		//Creating a Folder by name Percentage
-		File file1 = new File("C:\\Users\\bmastaff\\worksheets\\Percentage");
+		//Creating a Folder by name Percentage-Problems
+		File file1 = new File("C:\\Users\\bmastaff\\worksheets\\2015\\Percentage-Problems");
 		file1.mkdir();
 		file1.createNewFile();
 		// For loop for Array list 2 and creating a folder by name Set.
 		for (int j : al_1)
 		{
-			File file = new File("C:\\Users\\bmastaff\\worksheets\\Percentage\\Set" + j);
+			File file = new File("C:\\Users\\bmastaff\\worksheets\\2015\\Percentage-Problems\\Set" + j);
 			file.mkdir();
 			file.createNewFile();
 			//creating txt file by name per.txt and per_ans.txt
 			PrintWriter out_percentage = new PrintWriter(
 					new BufferedWriter(new FileWriter(
-							"C:\\Users\\bmastaff\\worksheets\\Percentage\\Set" + j +"\\per"+ j + ".txt", true)));
+							"C:\\Users\\bmastaff\\worksheets\\2015\\Percentage-Problems\\Set" + j +"\\per"+ j + ".txt", true)));
 			PrintWriter out_percentage_answers = new PrintWriter(
 					new BufferedWriter(new FileWriter(
-							"C:\\Users\\bmastaff\\worksheets\\Percentage\\Set" + j +"\\per_ans"+j + ".txt", true)));
+							"C:\\Users\\bmastaff\\worksheets\\2015\\Percentage-Problems\\Set" + j +"\\per_ans"+j + ".txt", true)));
 			// writing into the file per.txt and per_ans.txt
 			for (int i = 0; i < 25; i++)
 			{
@@ -59,8 +59,8 @@ public class percentages {
 				out_percentage.println();
 				percentage = (float) (al.get(i)) / 100 * j;
 				System.out.println(percentage);
-				out_percentage_answers.print(i + ")" + " " + percentage);
-				out_percentage_answers.print("   ");
+				out_percentage_answers.println(i + ")" + " " + percentage);
+				out_percentage_answers.println("   ");
 				
 			}
 			out_percentage.close();
